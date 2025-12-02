@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bản đồ Phiếu xử lý sự cố Vô tuyến</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #map { height: 100%; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([21.0278, 105.8342], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        var marker = L.marker([21.06965, 107.27352], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01051<br>            <b>TEN_CSHT:</b> EXP-DONG-MAU-DUONG-HUY-CPA_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 3<br>            <b>NVKT:</b> liembt.qnh@vnpt.vn - SĐT: 0833658333<br>            <b>Địa chỉ:</b> Thôn Đồng Mậu, Phường Mông Dương, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> REMOTE_SECTOR<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.14592, 107.35241], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00233<br>            <b>TEN_CSHT:</b> CONG-HOA-CPA_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 3<br>            <b>NVKT:</b> liembt.qnh@vnpt.vn - SĐT: 0833658333<br>            <b>Địa chỉ:</b> Bưu điện văn hoá Xã Cộng Hoà, Thôn 2, Xã Hải Hòa, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.06965, 107.27352], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01051<br>            <b>TEN_CSHT:</b> EXP-DONG-MAU-DUONG-HUY-CPA_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 3<br>            <b>NVKT:</b> liembt.qnh@vnpt.vn - SĐT: 0833658333<br>            <b>Địa chỉ:</b> Thôn Đồng Mậu, Phường Mông Dương, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> REMOTE_SECTOR<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.06965, 107.27352], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01051<br>            <b>TEN_CSHT:</b> EXP-DONG-MAU-DUONG-HUY-CPA_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 3<br>            <b>NVKT:</b> liembt.qnh@vnpt.vn - SĐT: 0833658333<br>            <b>Địa chỉ:</b> Thôn Đồng Mậu, Phường Mông Dương, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> REMOTE_SECTOR<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.95579, 106.97109], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00425<br>            <b>TEN_CSHT:</b> MO-DA-DAI-YEN-HLG_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 2<br>            <b>NVKT:</b> ninhtt.qnh@vnpt.vn - SĐT: 0918961699<br>            <b>Địa chỉ:</b> Mỏ đá Đại Yên, Phường Tuần Châu, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.97954, 107.03232], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00099<br>            <b>TEN_CSHT:</b> CAI-LAN-HLG_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 2<br>            <b>NVKT:</b> phson.qnh@vnpt.vn - SĐT: 0917194188<br>            <b>Địa chỉ:</b> Khu Công nghiệp Cái Lân, Phường Việt Hưng, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.92636, 106.988025], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00126<br>            <b>TEN_CSHT:</b> TUAN-CHAU-HLG_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 2<br>            <b>NVKT:</b> longtm.qnh@vnpt.vn - SĐT: 0918961669<br>            <b>Địa chỉ:</b> Trạm Viễn thông Tuần Châu, Khu 5, Phường Tuần Châu, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.891254, 106.81627], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01088<br>            <b>TEN_CSHT:</b> KCN-BAC-TIEN-PHONG-QYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> thanhpv.qnh@vnpt.vn - SĐT: 0918961738<br>            <b>Địa chỉ:</b> KCN Bắc Tiền Phong, Phường Phong Cốc, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.891254, 106.81627], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01088<br>            <b>TEN_CSHT:</b> KCN-BAC-TIEN-PHONG-QYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> thanhpv.qnh@vnpt.vn - SĐT: 0918961738<br>            <b>Địa chỉ:</b> KCN Bắc Tiền Phong, Phường Phong Cốc, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.911123, 106.84312], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00672<br>            <b>TEN_CSHT:</b> K12-HA-AN-QYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> thanhhv.qnh@vnpt.vn - SĐT: 0918961869<br>            <b>Địa chỉ:</b> Cty CP CN tàu thủy Sông Chanh, Khu phố 12, Phường Hà An, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.152422, 106.721033], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00916<br>            <b>TEN_CSHT:</b> GA-3-YEN-TU-UBI_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> kienvh.qnh@vnpt.vn - SĐT: 0912996683<br>            <b>Địa chỉ:</b> Ga cáp treo số 3 Yên Tử, Khoảnh 9, Tiểu Khu 32, Phường Yên Tử, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.911123, 106.84312], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00672<br>            <b>TEN_CSHT:</b> K12-HA-AN-QYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> thanhhv.qnh@vnpt.vn - SĐT: 0918961869<br>            <b>Địa chỉ:</b> Cty CP CN tàu thủy Sông Chanh, Khu phố 12, Phường Hà An, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.92304, 106.85768], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00153<br>            <b>TEN_CSHT:</b> HA-AN-QYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> anhlch.qnh@vnpt.vn - SĐT: 0915400197<br>            <b>Địa chỉ:</b> Khu 2, Phường Hà An, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.891254, 106.81627], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01088<br>            <b>TEN_CSHT:</b> KCN-BAC-TIEN-PHONG-QYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> thanhpv.qnh@vnpt.vn - SĐT: 0918961738<br>            <b>Địa chỉ:</b> KCN Bắc Tiền Phong, Phường Phong Cốc, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.891254, 106.81627], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01088<br>            <b>TEN_CSHT:</b> KCN-BAC-TIEN-PHONG-QYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> thanhpv.qnh@vnpt.vn - SĐT: 0918961738<br>            <b>Địa chỉ:</b> KCN Bắc Tiền Phong, Phường Phong Cốc, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.46171, 107.95503], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00089<br>            <b>TEN_CSHT:</b> THON-DONG-V-NINH-MCI_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 5<br>            <b>NVKT:</b> duyhn.qnh@vnpt.vn - SĐT: 0945986188<br>            <b>Địa chỉ:</b> Thôn Đông, Phường Móng Cái 2, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.37146, 107.90492], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00258<br>            <b>TEN_CSHT:</b> VINH-TRUNG-MCI_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 5<br>            <b>NVKT:</b> namdt.qnh@vnpt.vn - SĐT: 0916596848<br>            <b>Địa chỉ:</b> Bưu điện văn hoá Xã Vĩnh Trung, Thôn 2, Xã Vĩnh Thực, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.46171, 107.95503], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00089<br>            <b>TEN_CSHT:</b> THON-DONG-V-NINH-MCI_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 5<br>            <b>NVKT:</b> duyhn.qnh@vnpt.vn - SĐT: 0945986188<br>            <b>Địa chỉ:</b> Thôn Đông, Phường Móng Cái 2, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.37146, 107.90492], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00258<br>            <b>TEN_CSHT:</b> VINH-TRUNG-MCI_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 5<br>            <b>NVKT:</b> namdt.qnh@vnpt.vn - SĐT: 0916596848<br>            <b>Địa chỉ:</b> Bưu điện văn hoá Xã Vĩnh Trung, Thôn 2, Xã Vĩnh Thực, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.30151, 107.34451], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00757<br>            <b>TEN_CSHT:</b> KHE-CAT-TYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 4<br>            <b>NVKT:</b> canhvv.qnh@vnpt.vn - SĐT: 0945097098<br>            <b>Địa chỉ:</b> Thôn Hà Dong Bắc, Xã Hải Lạng, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.30151, 107.34451], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00757<br>            <b>TEN_CSHT:</b> KHE-CAT-TYN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 4<br>            <b>NVKT:</b> canhvv.qnh@vnpt.vn - SĐT: 0945097098<br>            <b>Địa chỉ:</b> Thôn Hà Dong Bắc, Xã Hải Lạng, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.32971, 107.58905], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01050<br>            <b>TEN_CSHT:</b> EXP-XA-TAN-LAP-DHA_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 4<br>            <b>NVKT:</b> haitv.qnh@vnpt.vn - SĐT: 0913398218<br>            <b>Địa chỉ:</b> Thôn Tân Lập, Xã Đầm Hà, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> REMOTE_SECTOR<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.32971, 107.58905], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_01050<br>            <b>TEN_CSHT:</b> EXP-XA-TAN-LAP-DHA_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 4<br>            <b>NVKT:</b> haitv.qnh@vnpt.vn - SĐT: 0913398218<br>            <b>Địa chỉ:</b> Thôn Tân Lập, Xã Đầm Hà, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> REMOTE_SECTOR<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.848722, 107.486744], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00356<br>            <b>TEN_CSHT:</b> Q-LAN-THAI-HOA-VDN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 3<br>            <b>NVKT:</b> nhuth.qnh@vnpt.vn - SĐT: 0918961802<br>            <b>Địa chỉ:</b> Nhà ông Vũ Văn Dung, Thôn Thái Hòa, Đặc khu Vân Đồn, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> CELL_OOS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.848722, 107.486744], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00356<br>            <b>TEN_CSHT:</b> Q-LAN-THAI-HOA-VDN_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 3<br>            <b>NVKT:</b> nhuth.qnh@vnpt.vn - SĐT: 0918961802<br>            <b>Địa chỉ:</b> Nhà ông Vũ Văn Dung, Thôn Thái Hòa, Đặc khu Vân Đồn, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> HW_TTS_MUC_TRAM<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([20.957057, 107.004059], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00689<br>            <b>TEN_CSHT:</b> LITTLE-VIET-NAM-HLG_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 2<br>            <b>NVKT:</b> binhbc.qnh@vnpt.vn - SĐT: 0918961716<br>            <b>Địa chỉ:</b> Khu Đô thị Little, Phường Bãi Cháy, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> POWER_AC_EAS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.176778, 107.353118], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00424<br>            <b>TEN_CSHT:</b> MINH-HOA-CONG-HOA-CPA_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 3<br>            <b>NVKT:</b> tuhv.qnh@vnpt.vn - SĐT: 0911093183<br>            <b>Địa chỉ:</b> Nhà bà Nguyễn Thị Hoa, Thôn Cái Tăn, Xã Hải Hòa, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> POWER_AC_EAS<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        var marker = L.marker([21.094714, 106.48628], 
+            {icon: L.icon({
+                iconUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-icon-red.png',
+                shadowUrl: 'https://trungtk.github.io/sucovotuyen/reports/icons/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })}).addTo(map)
+            .bindPopup("            <b>MA_CSHT:</b> CSHT_QNH_00011<br>            <b>TEN_CSHT:</b> DAM-THUY-DTU_QNH<br>            <b>Đơn vị:</b> Tổ Hạ tầng 1<br>            <b>NVKT:</b> tangm.qnh@vnpt.vn - SĐT: 0918961774<br>            <b>Địa chỉ:</b> Nguyễn Thị Nguyệt, Thôn Đạm Thuỷ, Phường Đông Triều, Tỉnh Quảng Ninh<br>            <b>Vô tuyến:</b> MACRO<br>            <b>Loại phiếu:</b> HW_OUTDOOR<br>            <b>Thời gian sự cố:</b> 12/02/2025<br>            <b>Thời gian Clear sự cố:</b> Chưa Clear            ");
+            
+        map.setView([21.06965, 107.27352], 10);
+        
+    </script>
+</body>
+</html>
